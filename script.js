@@ -10,6 +10,14 @@ const API_KEY="AIzaSyDmcx3deG88NsU1U2jGe4TT42RtNwFEpLg";
 const API_URL=`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
   
 
+window.addEventListener('load', () => {
+    setTimeout(() => {
+    document.getElementById('intro-screen').style.display = 'none';
+    document.getElementById('chatbot-container').style.display = 'block';
+    }, 3000);
+    });
+    
+
 let typingInterval,controller;
 const chatHistory= [];
 const userData = { message: "",file: {}};
